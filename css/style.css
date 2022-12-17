@@ -112,7 +112,8 @@ body {
 .container {
   width: 100%;
   max-width: 1320px;
-  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin: 0 auto;
 }
 
@@ -137,8 +138,16 @@ body {
 
 /* HEADER */
 .header {
-  /* padding: 5.6rem 1.6rem; */
+  padding: 0.8rem 0 1.2rem;
 }
+
+.header__rectangle {
+  width: 100%;
+  height: 1.6rem;
+  display: block;
+  background-color: var(--primary-white-color);
+}
+
 .header__container {
   display: flex;
   align-items: center;
@@ -150,10 +159,11 @@ body {
 
 .sitenav__list {
   display: flex;
-  gap: 3.8rem;
+  /* gap: 3.8rem; */
 }
 
 .sitenav__item {
+  position: relative;
 }
 
 .sitenav__link {
@@ -164,7 +174,7 @@ body {
   display: flex;
   /* align-items: center; */
   column-gap: 0.7rem;
-  padding: 5rem 0;
+  padding: 3.2rem 1.9rem;
 }
 
 .sitenav__link img {
@@ -172,7 +182,34 @@ body {
 }
 
 .sitenav__link:hover img {
-  transform: rotate(-90deg);
+  transform: translateY(7px);
+}
+
+.sitenav__item:hover .sitenav__item_inner-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sitenav__item_inner-list {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  padding: 5px 0;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sitenav__item_inner-item {
+}
+
+.sitenav__item_inner-link {
+  color: var(--primary-color);
+  line-height: 1.9;
+  padding: 3rem 2rem;
+  text-transform: uppercase;
 }
 
 .logo-link {
@@ -193,9 +230,25 @@ body {
 }
 
 .header__icons_link {
+  position: relative;
 }
 
 .header__icons_img {
+}
+
+.header__icons_img-ico {
+  position: absolute;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary-white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  border-radius: 50%;
+  bottom: -5px;
+  right: -5px;
 }
 
 /* MAIN */
@@ -205,7 +258,10 @@ body {
 
 /* HERO SECTION */
 .hero {
+  padding: 1.6rem;
+  background-color: var(--primary-white-color);
 }
+
 .hero__container {
   background-image: url(../images/jpg/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -279,11 +335,12 @@ body {
 
 /* SHOPPING SECTION */
 .shopping {
-  padding: 6.3rem 8.1rem;
   margin-bottom: 4rem;
 }
 
 .shopping__container {
+  padding: 6.3rem 8.1rem;
+  background-color: var(--primary-white-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -324,10 +381,13 @@ body {
 /* ESSENTIALS SECTION */
 .essentials {
   margin-bottom: 4rem;
+  padding: 1.6rem;
+  background-color: var(--primary-white-color);
 }
 
 .essentials__container {
   padding: 6.2rem 11.7rem 48.4rem;
+  background-color: var(--primary-white-color);
   background-image: url(../images/jpg/essentials-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -356,16 +416,19 @@ body {
 }
 
 .features__design {
-  padding: 6.4rem 3.2rem 6.4rem 1rem;
+  padding: 6.4rem 3.2rem 6.4rem 3.2rem;
   display: flex;
   justify-content: space-between;
+  background-color: var(--primary-white-color);
+  margin-bottom: 2.4rem;
 }
 
 .features__time {
-  padding: 6.4rem 1rem 6.4rem 3.2rem;
+  padding: 6.4rem 3.2rem 6.4rem 3.2rem;
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+  background-color: var(--primary-white-color);
 }
 
 .features__img {
@@ -402,11 +465,14 @@ body {
 
 /* SUBSCRIBE SECTION */
 .subscribe {
-  padding: 6.3rem 0;
+  padding: 1.6rem;
+  margin-bottom: 4rem;
 }
 
 .subscribe__container {
+  padding: 6.3rem 0;
   text-align: center;
+  background-color: var(--primary-white-color);
 }
 
 .subscribe__title {
@@ -427,6 +493,7 @@ form input {
   border-bottom: 1px solid var(--primary-color);
   outline: none;
   margin-right: 1.6rem;
+  background-color: transparent;
 }
 
 form button {
@@ -441,13 +508,16 @@ form button {
 
 /* KINNMOMENTS SECTION */
 .kinnmoments {
-  padding: 6.4rem 3.2rem;
+  /* padding: 6.4rem 3.2rem; */
   margin-bottom: 12.8rem;
 }
+
 .kinnmoments__container {
+  padding: 2.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--primary-white-color);
 }
 
 .kinnmoments__title {
